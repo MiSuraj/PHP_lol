@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Learn Php</title>
+    </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto+Mono:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="s.css">
+    <script src="mmy.js"></script>
+    <body  id="mode">
+
+            <button onclick="dark()"style="text-align:right;">Dark</button>
+            <button onclick="light()">Light</button>
+        
+        <div id="content"> 
+            <h1 style="text-align:center;text-decoration: underline;">Learn Php</h1>
+
+            <h3 style="text-decoration:underline" >Content</h3>
+
+            <p>module 1: PHP Basics:Introduction to PHP, Basic Syntax of PHP, Embedding PHP in HTML, Comments,
+                Variables, Constants, Managing Variables, Operators and Operator Precedence , String and String
+                Manipulation functions(Built in function of string), Maths built in functions,
+                Conditional Control Structures: If statement, If- else statement, If- else if statement, Nested
+                If, Switch statement nested switch, break statement.
+                Loops: while loop, do- while loop, for loop and foreach loop.
+                Functions in PHP: Functions, User-Defined function, Call by value and call by references,
+                Understanding variable scope, Global Variables, Static Variables, Include and Require, Built-in
+                functions in PHP.
+                Arrays: Arrays and its types in PHP, Accessing Elements of an Array, Modifying Elements of
+                an Array, in built Functions in array, Array Sorting
+                Forms : Definitions, types of inputs , different buttons controls etc
+                </p>
+                <br>
+                <p>
+                module 2:Class and Objects: Distinguise between class and objects, how they are formed basic syntax of class and objects in PHP, object creation process in php , working of public, private and protected modifiers with codes, how to access the private property and methods outside the class using class object, ReflectionMethod(), ReflectionProperty(),uses of $this, constructor and destructor in PHP(magic functions). all the things with code implementation.
+                DATABASE:
+                creation of database in PHPMYADMIN steps, Working of database, Types of database creation in PHP(procedural, object oriented), connection string, Insertaion of data from form to database, read database data on screen using html table tags , updation of previously stored data , deletion of previously stored data row by, handling the form with different buttons, working of following things die(), error_reporting(), super global variables($_GET, $_POST, $_SERVER, $_REQUEST, $_COOKIES, $_SESSION,$_FILES), PHP_SELF(), issest(), empty(), isEmpty(). Working of crud operations with codes.
+                
+                SESSIONS:
+                why session required, working, types of session(event bound, time bound), creation of session, deletion of session, start_session(), destroy(), unset() complete working with codes.
+                
+                COOKIES:
+                Why cookies, comaprision with sessions, importance of cookies, working, set_cookie() along with 7 parameters, working and importance of each parameter, how to get the machine name in cookie variable, how to get php interpreter information in cookies, how to get user IP address in cookie, codes for everything, deletion of cookies.
+                
+                FILEHANDLING:
+                creation of files, updations of files, deletion of files , content entry in a file,working of various functions : fopen(), fclose(), fwrite(), fread(), fgets(), fgetc(),
+                file_exists(), unlink(), copy(), file_put_content(), file_get_content(), all these function with the parameter types they required also type sof modes why modes parameter required, for the execution of code succefully, file handler/pointer. Codes for the file handling.
+            </p>
+            <br>
+
+            <h3>Introduction to PHP</h3>
+            <p>-> PHP is a server scripting language.</p>
+            <p>-> All scripting languages are programming languages.</p> 
+              <p>-> The scripting language is basically a language where instructions are written for a run time environment. </p> 
+              <p>-> They do not require the compilation step and are rather interpreted. </p> 
+               <p>-> It brings new functions to applications and glue complex system together. </p>
+               <p>A scripting language is a programming language designed for integrating and communicating with other programming languages.</p>
+
+                <p>There are many scripting languages some of them are discussed below:</p>
+            <p>-> Php: is a server scripting language.</p>
+            <p>-> bash: It is a scripting language to work in the Linux interface. It is a lot easier to use bash to create scripts than other programming languages. It describes the tools to use and code in the command line and create useful reusable scripts and conserve documentation for other people to work with. </p>
+            <p>-> Node js: It is a framework to write network applications using JavaScript. Corporate users of Node.js include IBM, LinkedIn, Microsoft, Netflix, PayPal, Yahoo for real-time web applications. </p> 
+            <p>-> Ruby: There are a lot of reasons to learn Ruby programming language. Ruby’s flexibility has allowed developers to create innovative software. It is a scripting language which is great for web development.</p>
+            <p>-> Python: It is easy, free and open source. It supports procedure-oriented programming and object-oriented programming. Python is an interpreted language with dynamic semantics and huge lines of code are scripted and is currently the most hyped language among developers.</p>  
+            <p>-> Perl: A scripting language with innovative features to make it different and popular. Found on all windows and Linux servers. It helps in text manipulation tasks. High traffic websites that use Perl extensively include priceline.com, IMDB. </p>
+              <br>     
+                 Advantages of scripting languages:
+               </p>
+               <br>
+               <p>Easy learning: The user can learn to code in scripting languages quickly, not much knowledge of web technology is required. </p>
+                <p>Fast editing: It is highly efficient with the limited number of data structures and variables to use.</p>
+                <p>Interactivity: It helps in adding visualization interfaces and combinations in web pages. Modern web pages demand the use of scripting languages. To create enhanced web pages, fascinated visual description which includes background and foreground colors and so on.</p>
+                <p>Functionality: There are different libraries which are part of different scripting languages. They help in creating new applications in web browsers and are different from normal programming languages.</p>
+          
+               </p>
+               <br>
+               <p>
+                Application of Scripting Languages: Scripting languages are used in many areas:
+                Scripting languages are used in web applications. It is used in server side as well as client side. Server side scripting languages are: JavaScript, PHP, Perl etc. and client side scripting languages are: JavaScript, AJAX, jQuery etc.
+                Scripting languages are used in system administration. For example: Shell, Perl, Python scripts etc.
+                It is used in Games application and Multimedia.
+                It is used to create plugins and extensions for existing applications.
+                </p>
+                <h3 style="text-decoration:underline;">Basic Syntax of PHP</h3>
+
+                <br>
+                <p>A PHP script is executed on the server, and the plain HTML result is sent back to the browser.</p>
+                <p>A PHP script can be placed anywhere in the document.</p>
+                <p> A PHP script starts with < ?php and ends with ?>:</p>
+
+
+               <div style="display:flex">
+                   <div>
+                <h3 style="text-decoration: underline">Embedding Php in Html</h3>
+
+                <textarea disabled="true" style="border: none;width:500px;height:200px;background-color:white;">
+                 Note: This code will not executed on html file because html is run by browsers, If we want to run the code we have to install Server(any:but for php xampp) and then create a php file and write html code inside that file, It will run. A PHP script is executed on the server, and the plain HTML result is sent back to the browser.
+                   
+                 Example:(file name.php) 
+                    <!DOCTYPE html>
+                         <html>
+                                <body>
+    
+                           <h1>My first PHP page</h1>
+                            //php syntax
+                              <?php
+                                 echo "Hello World!";
+                               ?>
+
+                            //php syntax ends   
+    
+                             </body>
+                        </html>
+
+                </textarea>
+            </div>
+              <br>
+              <div>
+              <h3 style="text-decoration: underline">Embedding Html in Php</h3>
+              <textarea disabled="true" style="border: none;width:500px;height:200px;background-color:white;">
+
+                Example:(file name.php) 
+                //only code which is inside echo will run on th browser/on client side
+                    <?php 
+
+                   
+                    echo 
+                        "
+                        <html>
+                        <head>
+                           <title>title</title>
+                        </head>
+                         <body>
+                           <h1>Hello world</h1>
+                         </body>
+                       </html>
+                     
+                      "
+                    ?>
+
+
+
+               </textarea>
+            </div>
+            </div>
+
+
+            <h3 style="text-decoration:underline ;">Comments in PHP</h3>
+            <p>PHP has two built-in ways of commenting:single-line comments and multiline comments. </p>
+                <h3> Single-line PHP Comments</h3>
+                <textarea disabled="true" style="border: none;width:500px;height:200px;background-color:white;">
+
+                    Example:(file name.php) 
+                    <?php
+                          echo "This message will be printed to the user."; // This is my first output
+                          echo "This will be also be printed."; # This is my second output
+                          // echo "This will not be printed to the user."";
+                          # echo "And neither will this.";
+                    ?>
+    
+    
+                   </textarea>
+                <p> Single-line PHP comments are useful for short notes before a code block or for explaining a single line of code. To leave a single-line comment, type two forward slashes (//) followed by your comment text. All text to the right of the // will be ignored. You can also use a hash symbol (#) instead of // to make a single-line comment.</p>  </p>
+                <h3>Multiline PHP Comments</h3>
+                <p>PHP also allows for comments that span multiple lines, in case you want to comment out a larger section of code or leave a more descriptive comment. Start your multiline comment by writing /* and end it by writing */. For </p>
+                <textarea disabled="true" style="border: none;width:500px;height:200px;background-color:white;">
+
+                    Example:(file name.php) 
+
+                    <?php
+                    /* This is a multiline PHP
+                    comment. None of this
+                    will be shown to the user. */
+                    echo "This message will be printed to the user.";
+                    ?>
+    
+    
+                   </textarea>
+
+                
+                
+                
+           <h3>Variables, Constants, Managing Variables</h3>
+
+           <p>Variables are "containers" for storing information.</p>
+          
+            <p>In PHP, a variable starts with the $ sign, followed by the name of the variable:</p>
+            A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume).
+
+           <p> Rules for PHP variables:</p>
+
+          <p>A variable starts with the $ sign, followed by the name of the variable</p>
+          <p>A variable name must start with a letter or the underscore character</p>
+          <p>A variable name cannot start with a number</p>
+          <p>A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )</p>
+          <p>Variable names are case-sensitive ($age and $AGE are two different variables)</p>
+
+          <h5>Output Variables</h5>
+         <textarea disabled="true" style="border: none;width:500px;height:200px;background-color:white;">
+
+            Example:(file name.php) 
+
+
+            <?php
+            $txt = "W3Schools.com";
+            echo "I love $txt!";
+            ?>
+            The following example will produce the same output as the example above:
+            
+            <?php
+             $txt = "W3Schools.com";
+             echo "I love " . $txt . "!";
+            ?> 
+
+           </textarea>
+           <h4>PHP is a Loosely Typed Language</h4>
+           <p>
+            In the example above, notice that we did not have to tell PHP which data type the variable is.
+            
+            PHP automatically associates a data type to the variable, depending on its value. Since the data types are not set in a strict sense, you can do things like adding a string to an integer without causing an error.</p>
+
+           <h3>PHP Variables Scope</h3>
+          <p>In PHP, variables can be declared anywhere in the script.
+
+            The scope of a variable is the part of the script where the variable can be referenced/used.
+            
+            PHP has three different variable scopes:</p>
+            <p>
+           1.) local
+           2.) global
+            3.)static</p>
+
+            <h3>Global and Local Scope</h3>
+            <p>A variable declared outside a function has a GLOBAL SCOPE and can only be accessed outside a function:</p>
+            <textarea disabled="true" style="border: none;width:500px;height:200px;background-color:white;">
+
+                Example:(file name.php) 
+    
+    
+                <?php
+                $x = 5; // global scope
+                
+                function myTest() {
+                  // using x inside this function will generate an error
+                  echo "<p>Variable x inside function is: $x</p>";
+                }
+                myTest();
+                
+                echo "<p>Variable x outside function is: $x</p>";
+                ?>
+    
+               </textarea>
+               <p>A variable declared within a function has a LOCAL SCOPE and can only be accessed within that function:</p>
+
+               <textarea disabled="true" style="border: none;width:500px;height:200px;background-color:white;">
+
+                Example:(file name.php) 
+    
+    
+                <?php
+                function myTest() {
+                  $x = 5; // local scope
+                  echo "<p>Variable x inside function is: $x</p>";
+                }
+                myTest();
+                
+                // using x outside the function will generate an error
+                echo "<p>Variable x outside function is: $x</p>";
+                ?>
+    
+               </textarea>
+               <h3>PHP The global Keyword</h3>
+
+               <p>The global keyword is used to access a global variable from within a function.
+
+                To do this, use the global keyword before the variables (inside the function):</p>
+             
+
+            </textarea>
+            <p>A variable declared within a function has a LOCAL SCOPE and can only be accessed within that function:</p>
+
+            <textarea disabled="true" style="border: none;width:500px;height:200px;background-color:white;">
+
+             Example:(file name.php) 
+ 
+ 
+             <?php
+             $x = 5;
+             $y = 10;
+             
+             function myTest() {
+               global $x, $y;
+               $y = $x + $y;
+             }
+             
+             myTest();
+             echo $y; // outputs 15
+             ?>
+            </textarea>
+
+            <p>PHP also stores all global variables in an array called $GLOBALS[index].
+                 The index holds the name of the variable. 
+                 This array is also accessible from within functions and can be used to update global variables directly.
+            </p>
+             <p>   The example above can be rewritten like this:</p>
+             
+            <textarea disabled="true" style="border: none;width:500px;height:200px;background-color:white;">
+
+                Example:(file name.php) 
+    
+    
+                <?php
+                $x = 5;
+                $y = 10;
+                
+                function myTest() {
+                  $GLOBALS['y'] = $GLOBALS['x'] + $GLOBALS['y'];
+                }
+                
+                myTest();
+                echo $y; // outputs 15
+                ?>
+               </textarea>
+
+               <h3>PHP The static Keyword</h3>
+               <p>Normally, when a function is completed/executed, all of its variables are deleted. However, sometimes we want a local variable NOT to be deleted. We need it for a further job.
+
+                To do this, use the static keyword when you first declare the variable:</p>
+
+                <textarea disabled="true" style="border: none;width:500px;height:200px;background-color:white;">
+
+                    Example:(file name.php) 
+        
+                    <?php
+                    function myTest() {
+                      static $x = 0;
+                      echo $x;
+                      $x++;
+                    }
+                    
+                    myTest();
+                    myTest();
+                    myTest();
+                   </textarea>
+                   <P>Then, each time the function is called, that variable will still have the information it contained from the last time the function was called.
+
+                    Note: The variable is still local to the function.</P>
+
+                  <h1>PHP Constants</h1>
+                  <p>->Constants are like variables except that once they are defined they cannot be changed or undefined.</p>
+                  <p>-> A constant is an identifier (name) for a simple value. The value cannot be changed during the script.</p>
+
+                   <p>->  A valid constant name starts with a letter or underscore (no $ sign before the constant name).</p>
+                    
+                    <P>Note: Unlike variables, constants are automatically global across the entire script.</p>
+                      
+                    <p>Syntex : define(name,value,case-sensitive)</p>
+                    <p>name: Specifies the name of the constant<p>
+                    <p>value: Specifies the value of the constant</p>
+                    <P>case-insensitive: Specifies whether the constant name should be case-insensitive. Default is false</P>
+
+                    <textarea disabled="true" style="border: none;width:500px;height:200px;background-color:white;">
+
+                        Example:(file name.php) 
+             //Variable with case case-insensitive
+                        <?php
+                        define("GREETING", "Hello Suraj", true);
+                        echo greeting;
+                        ?>
+                       </textarea>
+
+                       <h3>PHP Constant Arrays</h3>
+                       <p>In PHP7, you can create an Array constant using the define() function.</p>
+
+                        
+                    <textarea disabled="true" style="border: none;width:500px;height:200px;background-color:white;">
+
+                        Example:(file name.php) 
+                        <?php
+                        define("human", [
+                          "suraj",
+                          "sani",
+                          "karan"
+                        ]);
+                        echo human[0];
+                        ?>
+                        
+                       </textarea>
+                       <h4>Constants are Global</h4>
+                      <p>Constants are automatically global and can be used across the entire script.</p>
+                      <textarea disabled="true" style="border: none;width:500px;height:200px;background-color:white;">
+
+                        Example:(file name.php) 
+                        <?php
+                        define("GREETING", "Hello Suraj");
+                        function myTest() {
+                          echo GREETING;
+                        }
+                         
+                        myTest();
+                        ?>
+                        
+                       </textarea>
+                       <h3>PHP Data Types</h3>
+                       <p>Variables can store data of different types, and different data types can do different things.</p>
+
+
+                       <p>Php supports the following data types :</p>
+                       <ol>
+                           <li>String</li>
+                           <li>Integer</li>
+                           <li>Float (floating point numbers - also called double)</li>
+                           <li>Boolean</li>
+                           <li>Array</li>
+                           <li>Object</li>
+                           <li>NULL</li>
+                           <li>Resource</li>
+                       </ol>
+                       <h4>PHP String</h4>
+                           <p>A string is a sequence of characters, like "Hello world!".</p>
+                           <p>A string can be any text inside quotes. You can use single or double quotes:</p> 
+                            
+                           <textarea disabled="true" style="border: none;width:500px;height:200px;background-color:white;">
+
+                            Example:(file name.php) 
+
+                            <?php 
+
+                            $v="I am String";
+                            var_dump($v);//this will print the data type on th browser
+                                 
+                            ?>
+                        
+                            
+                           </textarea>
+                           <h4>Php Integer</h4>
+                          <p>An integer data type is a non-decimal number between -2,147,483,648 and 2,147,483,647.</p>
+                            
+                          <textarea disabled="true" style="border: none;width:500px;height:200px;background-color:white;">
+
+                            Example:(file name.php) 
+
+                            <?php
+                            $x = 5985;
+                            var_dump($x);//output: int(5985)
+                            ?>
+                            
+                            
+                           </textarea>
+                           <h4>Php Float</h4>
+                           <p>A float (floating point number) is a number with a decimal point or a number in exponential form.
+
+                            In the following example $x is a float. The PHP var_dump() function returns the data type and value:</p>
+                            <textarea disabled="true" style="border: none;width:500px;height:200px;background-color:white;">
+
+                                Example:(file name.php) 
+    
+                                <?php
+                                $x = 59.89;
+                                var_dump($x);//output: float(59.89)
+                                ?>
+                                
+                                
+                               </textarea>
+                               <h4>PHP boolean</h4>
+                               <p> Boolean represents two possible states: TRUE or FALSE.</p>
+
+                               <p>$x = true;</p> 
+                                <p>$y = false;</p>
+                                <p>Booleans are often used in conditional testing. You will learn more about conditional testing in a later chapter of this tutorial.</p>
+
+                              <h4>PHP Array</h4>
+                             <p>An array stores multiple values in one single variable.</p> 
+
+                             <p>In the following example $cars is an array. The PHP var_dump() function returns the data type and value:</p>
+                             <textarea disabled="true" style="border: none;width:500px;height:200px;background-color:white;">
+
+                                Example:(file name.php) 
+    
+                                <?php
+                                $cars = array("Volvo","BMW","Toyota");
+                                var_dump($cars);
+                                ?>
+                                
+                                
+                               </textarea>
+
+                               <h3>PHP Object</h3>
+                               <p>Classes and objects are the two main aspects of object-oriented programming.</p>
+
+                               <p> A class is a template for objects, and an object is an instance of a class.</p>
+                               <p>When the individual objects are created, they inherit all the properties and behaviors from the class, but each object will have different values for the properties.
+                               <p>Let's assume we have a class named Car. A Car can have properties like model, color, etc. We can define variables like $model, $color, and so on, to hold the values of these properties.
+                                <br>
+                                When the individual objects (Volvo, BMW, Toyota, etc.) are created, they inherit all the properties and behaviors from the class, but each object will have different values for the properties.
+                                <br>
+                                If you create a __construct() function, PHP will automatically call this function when you create an object from a class.</p>
+                            </p>
+                            <textarea disabled="true" style="border: none;width:500px;height:200px;background-color:white;">
+
+                                Example:(file name.php) 
+                                <?php 
+
+                                class Car{
+                                    public $color;
+                                    public $price;
+                           
+                                    public function __construct($color,$price){
+                                       $this ->color=$color;
+                                        $this ->price=$price;
+                                    }
+                                    public function getMessage(){
+                                        return "color is :".$this->color ." and "."Price : ".$this->price."!";
+                                    }
+                                   }
+                           
+                                    $myCar=new Car("Red",2333);
+                                   // echo $myCar->getMessage();
+                                    var_dump($myCar); //output : object(Car)#1 (2) { ["color"]=> string(3) "Red" ["price"]=> int(2333) }
+                                
+                               ?>
+                           
+                               </textarea>
+                               <h3>PHP Null</h3>
+                               <p>Null is a special data type which can have only one value: NULL.
+ <br>
+                                A variable of data type NULL is a variable that has no value assigned to it.
+  <br>                              
+                                Tip: If a variable is created without a value, it is automatically assigned a value of NULL.
+   <br>                             
+                                Variables can also be emptied by setting the value to NULL:</p>
+
+ <h3>PHP Resource</h3>
+ <p>The special resource type is not an actual data type. It is the storing of a reference to functions and resources external to PHP.
+<br>
+    A common example of using the resource data type is a database call.
+  <br>  
+    We will not talk about the resource type here, since it is an advanced topic.</p>
+
+
+
+                       <br>
+
+
+                       <h3>Operators and Operator Precedence</h3>
+
+                       <p>Operators are used to perform operations on variables and values.</p>
+                       <p>PHP divides the operators in the following groups:</p>
+                       <ol>
+                           <li>Arithmetic operators</li>
+                           <li>Assignment operators</li>
+                           <li>Comparison operators</li>
+                           <li>Increment/Decrement operators</li>
+                           <li>Logical operators</li>
+                           <li>String operators</li>
+                           <li>Array operators</li>
+                           <li>Conditional assignment operators</li>
+                       </ol>
+ 
+                       <h3>PHP Arithmetic Operators</h3>
+                       <p>The PHP arithmetic operators are used with numeric values to perform common arithmetical operations, such as addition, subtraction, multiplication etc.</p>
+                       <table style="width:100%">
+                           <tr>
+                            <td>Operator</td>
+                            <td>Name</td>
+                            <td>Example</td>
+                            <td>Result</td>
+                           </tr>
+                           <tr >
+                             <td>+</td>
+                             <td>Addition</td>
+                             <td>$x + $y</td>
+                             <td>Sum of $x and $y </td>
+                           </tr>
+                           <tr >
+                            <td>-</td>
+                            <td>Subtraction</td>
+                            <td>$x - $y</td>
+                            <td>Subtraction of $x and $y </td>
+                          </tr>
+                          <tr >
+                            <td>*</td>
+                            <td>Multplication</td>
+                            <td>$x * $y</td>
+                            <td>Multiplication of $x * $y </td>
+                          </tr>
+                          <tr >
+                            <td>/</td>
+                            <td>Division</td>
+                            <td>$x / $y</td>
+                            <td>Division of $x / $y </td>
+                          </tr>
+                          <tr >
+                            <td>%</td>
+                            <td>Modulus</td>
+                            <td>$x % $y</td>
+                            <td>Remainder of $x divided by $y </td>
+                          </tr>
+                          <tr >
+                            <td>**</td>
+                            <td>Exponentiation</td>
+                            <td>$x ** $y</td>
+                            <td>Result of raising $x to the $y'th power</td>
+                          </tr>
+
+                           
+                       </table>
+                       <h3>PHP Assignment Operators</h3>
+                       <p>The PHP assignment operators are used with numeric values to write a value to a variable.
+<br>
+                        The basic assignment operator in PHP is "=". It means that the left operand gets set to the value of the assignment expression on the right.</p>
+
+                      <h3>PHP Comparison Operators</h3>
+                      <p>The PHP comparison operators are used to compare two values (number or string):</p>
+
+                      <table style="width:100%">
+                        <tr>
+                          <td> Operator</td>
+                          <td>  Name</td>
+                          <td>   Example</td>
+                          <td>  Result</td>
+                         </tr>
+                         <tr>
+                           <td>==</td>
+                           <td>Equal</td>
+                           <td>$x == $y</td>
+                           <td>Returns true if $x is equal to $y </td>
+                         </tr>
+                         <tr >
+                          <td>===</td>
+                          <td>Identical</td>
+                          <td>$x === $y</td>
+                          <td>Returns true if $x is equal to $y, and they are of the same type</td>
+                        </tr>
+                        <tr >
+                          <td>!=</td>
+                          <td>Not Equal To</td>
+                          <td>$x != $y</td>
+                          <td>Returns true if $x is not equal to $y</td>
+                        </tr>
+                        <tr >
+                          <td> <> </td>
+                          <td>Not equal</td>
+                          <td>$x <> $y</td>
+                          <td>Sum of $x and $y </td>
+                        </tr>
+                        <tr >
+                          <td>!==</td>
+                          <td>Not Identical</td>
+                          <td>$x + $y</td>
+                          <td>Sum of $x and $y </td>
+                        </tr>
+                        <tr >
+                          <td>></td>
+                          <td>Greater than</td>
+                          <td>$x > $y</td>
+                          <td>$x > $y	Returns true if $x is greater than $y	</td>
+                        </tr>
+                        <tr >
+                          <td> < </td>
+                          <td>Less than</td>
+                          <td>$x < $y</td>
+                          <td>Returns true if $x is less than $y</td>
+                        </tr>
+                        <tr >
+                          <td> >= </td>
+                          <td>Greater than or equal to</td>
+                          <td>$x >= $y</td>
+                          <td>Returns true if $x is greater than or equal to $y</td>
+                        </tr>
+                        <tr >
+                                                  
+                            <td> <= </td>
+                            <td>Less than or equal to</td>
+                            <td>$x <= $y</td>
+                            <td>Returns true if $x is Less than or equal to $y</td>
+                          </tr>
+                           <td><=></td> 
+                          <td>Space Ship Operator</td>
+                          <td>$x <=> $y</td>
+                          <td>Returns an integer less than, equal to, or greater than zero,<br> depending on if $x is less than, equal to, or greater than $y. <br>Introduced in PHP 7.</td>
+                        </tr>
+
+                      </table style="width:100%">
+                      <h3>PHP Increment / Decrement Operators</h3>
+                      <p>The PHP increment operators are used to increment a variable's value.
+<br>
+                        The PHP decrement operators are used to decrement a variable's value.</p>
+                        <table>
+                          <tr>
+                            <td>Operator</td>
+                            <td>Name</td>
+                            <td>Description</td>
+                       
+                          </tr>
+                          <tr>
+                            <td>++$x</td>
+                            <td>Pre-increment</td>
+                            <td>Increments $x by one, then returns $x</td>
+                          </tr>
+                          <tr>
+                            <td>--$x</td>
+                            <td>Pre-decrement</td>
+                            <td>Decrease $x by one, then return $x</td>
+                            
+                          </tr>
+                          <tr>
+                            <td>$x++</td>
+                            <td>Post-increment</td>
+                            <td>return $x,then Increase $x by one</td>
+                          </tr>
+                          <tr>
+                            <td>$x--</td>
+                            <td>Post-decrement</td>
+                            <td>return $x,then Decrease $x by one</td>
+                          </tr>
+
+                        </table style="width:100%">
+                      <h3>PHP Logical Operators</h3>
+                      <table>
+                        <tr>
+                          <td>Operator</td>
+                          <td>Name</td>
+                          <td>Example</td>
+                          <td>Statement</td>
+                     
+                        </tr>
+                        <tr>
+                          <td>and</td>
+                          <td>And</td>
+                          <td>$x and $y</td>
+                          <td>True if both $x and $y are true</td>
+                        </tr>
+                        <tr>
+                          <td>or</td>
+                          <td>Or</td>
+                          <td>$x or $ y</td>
+                          <td>True if one of them is true</td>
+                        </tr>
+                        <tr>
+                          <td>xor</td>
+                          <td>XOR</td>
+                          <td>$x xor $y</td>
+                          <td>True if either $x or $y is true, but not both</td>
+                        </tr>
+                        <tr>
+                          <td>&&</td>
+                          <td>And</td>
+                          <td>$x && $y</td>
+                          <td>True if both $x and $y are true</td>
+                        </tr>
+                        <tr>
+                          <td>||</td>
+                          <td>Or</td>
+                          <td>$x|| $y</td>
+                          <td>True if either $x or $y is true</td>
+                        </tr>
+                        <tr>
+                          <td>!</td>
+                          <td>nOT</td>
+                          <td>!$X </td>
+                          <td>True if $x is not true</td>
+                        </tr>
+
+  
+
+                      </table>
+
+                      <h3>PHP String Operators</h3>
+                    <p>PHP has two operators that are specially designed for strings.</p>
+                      <table style="width:100%">
+                        <tr>
+                          <td>Operator</td>
+                          <td>Name</td>
+                          <td>Example</td>
+                          <td>Result</td>
+                        </tr>
+                        <tr>
+                          <td>.</td>
+                          <td>Concatenation</td>
+                          <td>$txt1 . $txt2</td>
+                          <td>Concatenation of $txt1 and $txt2</td>
+
+                        </tr>
+                        <tr>
+                          <td>.=</td>
+                          <td>Concatenation assignment</td>
+                          <td>$txt1 . =$txt2</td>
+                          <td>Appends $txt2 to $txt1</td>
+
+                        </tr>
+                      
+                      </table>
+                      <h3>PHP Array Operators</h3>
+                      <P>The PHP array operators are used to compare arrays.</P>
+                      <table style="width:100%">
+                        <tr>
+                          <td>Operator</td>
+                          <td>Name</td>
+                          <td>Example</td>
+                          <td>Result</td>
+                        </tr>
+                        <tr>
+                          <td>+</td>
+                          <td>Union</td>
+                          <td>$x+$y</td>
+                          <td>Union of $x and $y</td>
+                        </tr>
+                        <tr>
+                          <td>==</td>
+                          <td>Equality</td>
+                          <td>$x == $y</td>
+                          <td>Returns true if $x and $y have the same key/value pairs</td>
+                        </tr>
+                        <tr>
+                          <td>===</td>
+                          <td>Identity</td>
+                          <td>$x === $y</td>
+                          <td>Returns true if $x and $y have the same key/value pairs in the same order and of the same types</td>
+                        </tr>
+                        <tr>
+                          <td>!=</td>
+                          <td>Inequality</td>
+                          <td>$x!=$y</td>
+                          <td>Returns true if $x is not equal to $y</td>
+                        </tr>
+                        <tr>
+                          <td><></td>
+                          <td>Inequality</td>
+                          <td>$x <> $y</td>
+                          <td>Returns true if $x is not equal to $y</td>
+                        </tr>
+                       
+                        <tr>
+                          <td> !==</td>
+                          <td>Non-identity</td>
+                          <td>$x !== $y</td>
+                          <td>Returns true if $x is not identical to $y</td>
+                        </tr>
+                        
+                      
+                      
+                      </table>
+
+
+                      <h3>PHP Conditional Assignment Operators</h3>
+                      <p>The PHP conditional assignment operators are used to set a value depending on conditions:</p>
+
+                      <table style="width:100%">
+                        <tr>
+                          <td>Operator</td>
+                          <td>Name</td>
+                          <td>Example</td>
+                          <td>Result</td>
+                        </tr>
+                        <tr>
+                          <td>?:</td>
+                          <td>Ternary</td>
+                          <td>$x = expr1 ? expr2 : expr3</td>
+                          <td>Returns the value of $x.
+                            <br>The value of $x is expr2 if expr1 = TRUE.
+                            <br>The value of $x is expr3 if expr1 = FALSE</td>
+                        </tr>
+                        <tr>
+                          <td>??</td>
+                          <td>Null coalescing</td>
+                          <td>$x = expr1 ?? expr2</td>
+                          <td>Returns the value of $x.
+                            <br>The value of $x is expr1 if expr1 exists, and is not NULL.
+                            <br>If expr1 does not exist, or is NULL, the value of $x is expr2.
+                            <br>Introduced in PHP 7</td>
+                        </tr>
+                      
+                      </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+        
+    </body>
+</html>

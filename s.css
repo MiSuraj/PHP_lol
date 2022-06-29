@@ -1,0 +1,29 @@
+
+
+
+#mode {
+    background-color: black;
+      
+}
+#mode #content{
+    color:wheat;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
+#dark {
+    background-color: black;
+}
+#dark #content{
+    color: wheat;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#light{
+    background-color: wheat;
+}
+#light #content{
+    color:black;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
